@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Viva! Experiencias | Premiacoes e Incentivos para Empresas</title>
+    <meta name="description" content="A solucao definitiva de premiacao e incentivos para empresas. Elimine a carga operacional, ganhe controle total e engaje de verdade atraves de experiencias.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'viva-orange': '#f05133',
+                        'viva-orange-dark': '#d94429',
+                        'viva-gray': '#515151',
+                        'viva-gray-dark': '#2d2d2d',
+                        'viva-blue': '#0773b9',
+                        'viva-green': '#49a942',
+                    },
+                    fontFamily: {
+                        'sans': ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        html { scroll-behavior: smooth; }
+        .gradient-text {
+            background: linear-gradient(135deg, #f05133 0%, #d94429 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .hero-bg {
+            background: linear-gradient(180deg, #fafafa 0%, #ffffff 100%);
+        }
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+        .btn-primary {
+            background: linear-gradient(135deg, #f05133 0%, #d94429 100%);
+            transition: all 0.3s ease;
+        }
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(240, 81, 51, 0.4);
+        }
+        .testimonial-card {
+            background: linear-gradient(135deg, #ffffff 0%, #fafafa 100%);
+        }
+    </style>
+</head>
+<body class="font-sans text-viva-gray bg-white antialiased">
+
+    <!-- Header -->
+    <header class="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-md border-b border-gray-100 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16 lg:h-20">
+                <a href="#" class="flex-shrink-0">
+                    <img src="/images/logo-20viva-21-20alta.png" alt="Viva! Experiencias" class="h-10 lg:h-12 w-auto">
+                </a>
+                <nav class="hidden lg:flex items-center gap-8">
+                    <a href="#como-funciona" class="text-viva-gray hover:text-viva-orange transition-colors font-medium text-sm">Como Funciona</a>
+                    <a href="#solucoes" class="text-viva-gray hover:text-viva-orange transition-colors font-medium text-sm">Solucoes</a>
+                    <a href="#clientes" class="text-viva-gray hover:text-viva-orange transition-colors font-medium text-sm">Clientes</a>
+                    <a href="#contato" class="btn-primary text-white px-6 py-2.5 rounded-full font-semibold text-sm">Fale Conosco</a>
+                </nav>
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="lg:hidden p-2">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-white border-t border-gray-100 px-4 py-4">
+            <nav class="flex flex-col gap-4">
+                <a href="#como-funciona" class="text-viva-gray hover:text-viva-orange transition-colors font-medium">Como Funciona</a>
+                <a href="#solucoes" class="text-viva-gray hover:text-viva-orange transition-colors font-medium">Solucoes</a>
+                <a href="#clientes" class="text-viva-gray hover:text-viva-orange transition-colors font-medium">Clientes</a>
+                <a href="#contato" class="btn-primary text-white px-6 py-3 rounded-full font-semibold text-center">Fale Conosco</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="pt-24 lg:pt-32 pb-16 lg:pb-24 hero-bg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+                <div>
+                    <div class="inline-flex items-center gap-2 bg-viva-orange/10 text-viva-orange px-4 py-2 rounded-full text-sm font-semibold mb-6">
+                        <span class="w-2 h-2 bg-viva-orange rounded-full animate-pulse"></span>
+                        Plataforma 100% Digital
+                    </div>
+                    <h1 class="text-4xl lg:text-5xl xl:text-6xl font-black text-viva-gray-dark leading-tight mb-6">
+                        Sua equipe merece <span class="gradient-text">memorias inesqueciveis</span>.
+                        Seu RH merece o <span class="text-viva-blue">fim das planilhas</span>.
+                    </h1>
+                    <p class="text-lg lg:text-xl text-viva-gray/80 mb-8 leading-relaxed max-w-xl">
+                        A solucao definitiva de premiacao e incentivos para empresas com <strong>+250 colaboradores</strong>. Elimine a carga operacional, ganhe controle total e engaje de verdade.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="#contato" class="btn-primary text-white px-8 py-4 rounded-full font-bold text-lg text-center">
+                            Quero conhecer a plataforma
+                        </a>
+                    </div>
+                    <div class="flex items-center gap-6 mt-8 text-sm text-viva-gray/60">
+                        <div class="flex items-center gap-2">
+                            <svg class="w-5 h-5 text-viva-green" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            Setup rapido
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <svg class="w-5 h-5 text-viva-green" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            Suporte completo
+                        </div>
+                    </div>
+                </div>
+                <div class="relative">
+                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80" alt="Dashboard de gestao de premiacao" class="rounded-3xl shadow-2xl w-full">
+                    <div class="absolute -bottom-6 -left-6 bg-white rounded-2xl shadow-xl p-5 hidden lg:block">
+                        <div class="flex items-center gap-4">
+                            <div class="w-14 h-14 bg-viva-green/10 rounded-xl flex items-center justify-center">
+                                <svg class="w-7 h-7 text-viva-green" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <p class="text-2xl font-black text-viva-gray-dark">+3.000</p>
+                                <p class="text-sm text-viva-gray/60">Experiencias disponiveis</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="absolute -top-4 -right-4 bg-white rounded-2xl shadow-xl p-4 hidden lg:block">
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 bg-viva-orange/10 rounded-full flex items-center justify-center">
+                                <svg class="w-5 h-5 text-viva-orange" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <p class="font-bold text-viva-gray-dark">4.9/5</p>
+                                <p class="text-xs text-viva-gray/60">Satisfacao</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="py-12 bg-white border-y border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="text-center">
+                    <p class="text-3xl lg:text-4xl font-black text-viva-orange">+100</p>
+                    <p class="text-sm text-viva-gray/70 mt-1">Empresas atendidas</p>
+                </div>
+                <div class="text-center">
+                    <p class="text-3xl lg:text-4xl font-black text-viva-orange">+50 mil</p>
+                    <p class="text-sm text-viva-gray/70 mt-1">Colaboradores premiados</p>
+                </div>
+                <div class="text-center">
+                    <p class="text-3xl lg:text-4xl font-black text-viva-orange">+3.000</p>
+                    <p class="text-sm text-viva-gray/70 mt-1">Experiencias no catalogo</p>
+                </div>
+                <div class="text-center">
+                    <p class="text-3xl lg:text-4xl font-black text-viva-orange">98%</p>
+                    <p class="text-sm text-viva-gray/70 mt-1">Taxa de satisfacao</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problems Section -->
+    <section id="como-funciona" class="py-16 lg:py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12 lg:mb-16">
+                <h2 class="text-3xl lg:text-4xl font-black text-viva-gray-dark mb-4">
+                    Por que premiar virou um <span class="gradient-text">pesadelo logistico</span>?
+                </h2>
+                <p class="text-lg text-viva-gray/70 max-w-2xl mx-auto">
+                    Se voce gerencia grandes times, conhece bem este cenario:
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="card-hover bg-gray-50 rounded-2xl p-8 border border-gray-100">
+                    <div class="w-14 h-14 bg-red-100 rounded-xl flex items-center justify-center mb-6">
+                        <svg class="w-7 h-7 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-viva-gray-dark mb-3">RH ou Estoquista?</h3>
+                    <p class="text-viva-gray/70 leading-relaxed">
+                        Salas cheias de brindes, logistica de entrega complexa e atrasos que frustram o colaborador. Seu RH merece focar em pessoas, nao em caixas.
+                    </p>
+                </div>
+
+                <div class="card-hover bg-gray-50 rounded-2xl p-8 border border-gray-100">
+                    <div class="w-14 h-14 bg-red-100 rounded-xl flex items-center justify-center mb-6">
+                        <svg class="w-7 h-7 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-viva-gray-dark mb-3">O "Presente de Grego"</h3>
+                    <p class="text-viva-gray/70 leading-relaxed">
+                        O medo constante de escolher algo que ninguem gosta ou que vai para a gaveta. Premios genericos nao engajam ninguem.
+                    </p>
+                </div>
+
+                <div class="card-hover bg-gray-50 rounded-2xl p-8 border border-gray-100">
+                    <div class="w-14 h-14 bg-red-100 rounded-xl flex items-center justify-center mb-6">
+                        <svg class="w-7 h-7 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-viva-gray-dark mb-3">Caixa Preta de Metricas</h3>
+                    <p class="text-viva-gray/70 leading-relaxed">
+                        Quem aprovou? Quanto gastou? Sem metricas, a premiacao vira um custo sem ROI comprovado. Decisoes no escuro nao funcionam.
+                    </p>
+                </div>
+
+                <div class="card-hover bg-gray-50 rounded-2xl p-8 border border-gray-100">
+                    <div class="w-14 h-14 bg-red-100 rounded-xl flex items-center justify-center mb-6">
+                        <svg class="w-7 h-7 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-viva-gray-dark mb-3">Dinheiro e Frio</h3>
+                    <p class="text-viva-gray/70 leading-relaxed">
+                        Bonus em dinheiro ou cartao viram "pagamento de boleto". O colaborador gasta e esquece da empresa no dia seguinte.
+                    </p>
+                </div>
+            </div>
+
+            <div class="mt-12 text-center">
+                <p class="text-lg font-semibold text-viva-gray-dark">
+                    Pare de perder tempo com processos manuais e fornecedores que te deixam na mao.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Emotional Solution Section -->
+    <section class="py-16 lg:py-24 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+                <div>
+                    <h2 class="text-3xl lg:text-4xl xl:text-5xl font-black text-viva-gray-dark mb-6">
+                        Nao de premios. <br><span class="gradient-text">Crie Memorias.</span>
+                    </h2>
+                    <p class="text-lg text-viva-gray/80 mb-8 leading-relaxed">
+                        O dinheiro preenche o bolso, mas a experiencia preenche a vida. Na Viva!, transformamos sua verba de premiacao em historias que serao contadas no corredor da empresa.
+                    </p>
+                    <blockquote class="bg-white rounded-2xl p-6 border-l-4 border-viva-orange shadow-sm mb-8">
+                        <p class="text-viva-gray italic leading-relaxed text-lg">
+                            "Ninguem se lembra de como gastou o bonus de R$ 300,00 no supermercado. Mas <strong class="not-italic text-viva-gray-dark">ninguem esquece</strong> o jantar no topo da cidade ou o primeiro salto de paraquedas pago pela empresa."
+                        </p>
+                    </blockquote>
+                    <p class="text-lg font-semibold text-viva-gray-dark mb-8">
+                        Conecte a marca da sua empresa a momentos felizes da vida do seu colaborador.
+                    </p>
+                    <a href="#contato" class="inline-flex items-center gap-2 btn-primary text-white px-8 py-4 rounded-full font-bold text-lg">
+                        Quero falar com os consultores
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                        </svg>
+                    </a>
+                </div>
+                <div class="grid grid-cols-2 gap-4">
+                    <img src="https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?w=400&q=80" alt="Experiencia de viagem" class="rounded-2xl shadow-lg w-full h-48 lg:h-64 object-cover">
+                    <img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=400&q=80" alt="Amigos celebrando" class="rounded-2xl shadow-lg w-full h-48 lg:h-64 object-cover mt-8">
+                    <img src="https://images.unsplash.com/photo-1517457373958-b7bdd4587205?w=400&q=80" alt="Experiencia gastronomica" class="rounded-2xl shadow-lg w-full h-48 lg:h-64 object-cover">
+                    <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=400&q=80" alt="Equipe corporativa" class="rounded-2xl shadow-lg w-full h-48 lg:h-64 object-cover mt-8">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Platform Section -->
+    <section id="solucoes" class="py-16 lg:py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12 lg:mb-16">
+                <span class="inline-block bg-viva-blue/10 text-viva-blue px-4 py-2 rounded-full font-semibold text-sm mb-4">
+                    Plataforma Reconheca
+                </span>
+                <h2 class="text-3xl lg:text-4xl font-black text-viva-gray-dark mb-4">
+                    Autonomia para o Gestor, <span class="text-viva-blue">Controle para o RH</span>
+                </h2>
+                <p class="text-lg text-viva-gray/70 max-w-2xl mx-auto">
+                    Centralize toda a sua estrategia de incentivo em uma plataforma robusta, pensada para grandes volumes.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="card-hover bg-white rounded-2xl p-6 border border-gray-200 text-center">
+                    <div class="w-16 h-16 bg-viva-green/10 rounded-2xl flex items-center justify-center mx-auto mb-5">
+                        <svg class="w-8 h-8 text-viva-green" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-bold text-viva-gray-dark mb-2">Fim da Carga Operacional</h3>
+                    <p class="text-sm text-viva-gray/70">Tudo digital. O colaborador escolhe, a Viva! entrega. Zero estoque fisico.</p>
+                </div>
+
+                <div class="card-hover bg-white rounded-2xl p-6 border border-gray-200 text-center">
+                    <div class="w-16 h-16 bg-viva-orange/10 rounded-2xl flex items-center justify-center mx-auto mb-5">
+                        <svg class="w-8 h-8 text-viva-orange" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-bold text-viva-gray-dark mb-2">Catalogo de Experiencias</h3>
+                    <p class="text-sm text-viva-gray/70">Opcoes para todos os perfis, do gastronomico ao aventureiro, em todo o Brasil.</p>
+                </div>
+
+                <div class="card-hover bg-white rounded-2xl p-6 border border-gray-200 text-center">
+                    <div class="w-16 h-16 bg-viva-blue/10 rounded-2xl flex items-center justify-center mx-auto mb-5">
+                        <svg class="w-8 h-8 text-viva-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-bold text-viva-gray-dark mb-2">Gestao a Vista</h3>
+                    <p class="text-sm text-viva-gray/70">Dashboards em tempo real. Controle budget por centro de custo.</p>
+                </div>
+
+                <div class="card-hover bg-white rounded-2xl p-6 border border-gray-200 text-center">
+                    <div class="w-16 h-16 bg-viva-green/10 rounded-2xl flex items-center justify-center mx-auto mb-5">
+                        <svg class="w-8 h-8 text-viva-green" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-bold text-viva-gray-dark mb-2">SLA Garantido</h3>
+                    <p class="text-sm text-viva-gray/70">Suporte dedicado e garantia de satisfacao. Sem traumas com fornecedores.</p>
+                </div>
+            </div>
+
+            <div class="mt-12 lg:mt-16">
+                <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&q=80" alt="Plataforma Reconheca - Dashboard" class="rounded-3xl shadow-2xl w-full">
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="py-16 lg:py-24 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12 lg:mb-16">
+                <h2 class="text-3xl lg:text-4xl font-black text-viva-gray-dark mb-4">
+                    Como Funciona a Premiacao?
+                </h2>
+                <p class="text-lg text-viva-gray/70 max-w-2xl mx-auto">
+                    Um processo simples e eficiente em 3 passos
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="text-center">
+                    <div class="w-20 h-20 bg-viva-orange rounded-full flex items-center justify-center mx-auto mb-6 text-white text-2xl font-black">1</div>
+                    <h3 class="text-xl font-bold text-viva-gray-dark mb-3">Gestor define objetivos</h3>
+                    <p class="text-viva-gray/70">Gestor define os objetivos e pontuacoes da campanha de incentivo.</p>
+                </div>
+
+                <div class="text-center">
+                    <div class="w-20 h-20 bg-viva-orange rounded-full flex items-center justify-center mx-auto mb-6 text-white text-2xl font-black">2</div>
+                    <h3 class="text-xl font-bold text-viva-gray-dark mb-3">Viva! libera os vouchers</h3>
+                    <p class="text-viva-gray/70">Viva! Experiencias libera os vouchers para os premiados conforme definido.</p>
+                </div>
+
+                <div class="text-center">
+                    <div class="w-20 h-20 bg-viva-orange rounded-full flex items-center justify-center mx-auto mb-6 text-white text-2xl font-black">3</div>
+                    <h3 class="text-xl font-bold text-viva-gray-dark mb-3">Premiado resgata</h3>
+                    <p class="text-viva-gray/70">Premiado recebe o voucher e resgata no Catalogo de Premios as experiencias que deseja!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- When to Use -->
+    <section class="py-16 lg:py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12 lg:mb-16">
+                <h2 class="text-3xl lg:text-4xl font-black text-viva-gray-dark mb-4">
+                    Quando premiar com a Viva! Experiencias?
+                </h2>
+            </div>
+
+            <div class="grid grid-cols-2 lg:grid-cols-5 gap-6">
+                <div class="card-hover bg-gray-50 rounded-2xl p-6 text-center border border-gray-100">
+                    <div class="w-14 h-14 bg-viva-orange/10 rounded-xl flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-7 h-7 text-viva-orange" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+                        </svg>
+                    </div>
+                    <p class="font-semibold text-viva-gray-dark text-sm">Tempo de Casa</p>
+                </div>
+
+                <div class="card-hover bg-gray-50 rounded-2xl p-6 text-center border border-gray-100">
+                    <div class="w-14 h-14 bg-viva-blue/10 rounded-xl flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-7 h-7 text-viva-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/>
+                        </svg>
+                    </div>
+                    <p class="font-semibold text-viva-gray-dark text-sm">Reconhecimento</p>
+                </div>
+
+                <div class="card-hover bg-gray-50 rounded-2xl p-6 text-center border border-gray-100">
+                    <div class="w-14 h-14 bg-viva-green/10 rounded-xl flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-7 h-7 text-viva-green" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/>
+                        </svg>
+                    </div>
+                    <p class="font-semibold text-viva-gray-dark text-sm">Incentivo de Vendas</p>
+                </div>
+
+                <div class="card-hover bg-gray-50 rounded-2xl p-6 text-center border border-gray-100">
+                    <div class="w-14 h-14 bg-viva-orange/10 rounded-xl flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-7 h-7 text-viva-orange" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v13m0-13V6a2 2 0 112 2h-2zm0 0V5.5A2.5 2.5 0 109.5 8H12zm-7 4h14M5 12a2 2 0 110-4h14a2 2 0 110 4M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7"/>
+                        </svg>
+                    </div>
+                    <p class="font-semibold text-viva-gray-dark text-sm">Datas Comemorativas</p>
+                </div>
+
+                <div class="card-hover bg-gray-50 rounded-2xl p-6 text-center border border-gray-100 col-span-2 lg:col-span-1">
+                    <div class="w-14 h-14 bg-viva-blue/10 rounded-xl flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-7 h-7 text-viva-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/>
+                        </svg>
+                    </div>
+                    <p class="font-semibold text-viva-gray-dark text-sm">E muito mais!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Clients Section -->
+    <section id="clientes" class="py-16 lg:py-24 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12 lg:mb-16">
+                <h2 class="text-3xl lg:text-4xl font-black text-viva-gray-dark mb-4">
+                    Quem confia na Viva! Experiencias
+                </h2>
+                <p class="text-lg text-viva-gray/70 max-w-2xl mx-auto">
+                    Junte-se a lideres de mercado que ja modernizaram sua cultura de reconhecimento.
+                </p>
+            </div>
+
+            <!-- Client Logos Placeholder -->
+            <div class="bg-white rounded-2xl p-8 lg:p-12 border border-gray-200 mb-12">
+                <div class="grid grid-cols-3 lg:grid-cols-6 gap-8 items-center opacity-50">
+                    <div class="h-12 bg-gray-200 rounded-lg"></div>
+                    <div class="h-12 bg-gray-200 rounded-lg"></div>
+                    <div class="h-12 bg-gray-200 rounded-lg"></div>
+                    <div class="h-12 bg-gray-200 rounded-lg"></div>
+                    <div class="h-12 bg-gray-200 rounded-lg"></div>
+                    <div class="h-12 bg-gray-200 rounded-lg"></div>
+                </div>
+                <p class="text-center text-sm text-viva-gray/50 mt-6">[Logos de Clientes]</p>
+            </div>
+
+            <!-- Testimonial -->
+            <div class="testimonial-card rounded-3xl p-8 lg:p-12 border border-gray-200">
+                <div class="max-w-3xl mx-auto text-center">
+                    <svg class="w-12 h-12 text-viva-orange/20 mx-auto mb-6" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
+                    </svg>
+                    <p class="text-xl lg:text-2xl text-viva-gray-dark leading-relaxed mb-8 italic">
+                        "Antes, levavamos dias organizando a logistica de fim de ano. Com a Viva!, resolvemos em cliques e o time nunca esteve tao engajado."
+                    </p>
+                    <div>
+                        <p class="font-bold text-viva-gray-dark">[Nome do Cliente]</p>
+                        <p class="text-viva-gray/60">Head de People na [Empresa]</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section id="contato" class="py-16 lg:py-24 bg-viva-gray-dark">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+                <div>
+                    <h2 class="text-3xl lg:text-4xl xl:text-5xl font-black text-white mb-6">
+                        Sua campanha de incentivo nao precisa ser <span class="text-viva-orange">dor de cabeca</span>.
+                    </h2>
+                    <p class="text-lg text-white/70 mb-8 leading-relaxed">
+                        Transforme a cultura da sua empresa e recupere o tempo estrategico do seu RH. Vamos conversar sobre a sua proxima campanha?
+                    </p>
+                    <div class="flex items-center gap-6 text-white/60 text-sm">
+                        <div class="flex items-center gap-2">
+                            <svg class="w-5 h-5 text-viva-green" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            Sem compromisso
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <svg class="w-5 h-5 text-viva-green" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            Resposta em 24h
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <!-- Form Placeholder -->
+                    <div class="bg-white rounded-3xl p-8 lg:p-10">
+                        <div class="min-h-[300px] flex items-center justify-center border-2 border-dashed border-gray-300 rounded-2xl">
+                            <p class="text-viva-gray font-semibold text-lg">FORMULARIO AQUI</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 bg-viva-gray-dark border-t border-white/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col lg:flex-row items-center justify-between gap-8">
+                <img src="/images/logo-20viva-21-20alta-20horizontal-20branco-01.png" alt="Viva! Experiencias" class="h-12 w-auto">
+                <div class="flex flex-col lg:flex-row items-center gap-6 text-white/60 text-sm">
+                    <a href="#" class="hover:text-white transition-colors">Politica de Privacidade</a>
+                    <a href="#" class="hover:text-white transition-colors">Termos de Uso</a>
+                    <span>contato@vivaexperiencias.com.br</span>
+                </div>
+                <p class="text-white/40 text-sm">2025 Viva! Experiencias. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Mobile Menu Script -->
+    <script>
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when clicking on links
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+    </script>
+</body>
+</html>
